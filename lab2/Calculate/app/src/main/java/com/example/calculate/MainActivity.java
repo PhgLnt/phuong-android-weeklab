@@ -13,8 +13,9 @@ public class MainActivity extends AppCompatActivity {
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     Button btAdd, btSub, btMul, btDiv, btDel, btEq;
     EditText edResult, edNumber;
-    Integer lastvalue = 0, currentvalue;
+    Integer lastvalue = 1, currentvalue, resultOfAll = 0;
     String operation;
+    boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,40 +136,51 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 operation = "+";
-                lastvalue = Integer.parseInt(edNumber.getText().toString());
+                checkValue();
+                currentvalue = Integer.parseInt(edNumber.getText().toString());
                 edNumber.setText(null);
+                flag = true;
             }
         });
         btSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 operation = "-";
-                lastvalue = Integer.parseInt(edNumber.getText().toString());
+                checkValue();
+                currentvalue = Integer.parseInt(edNumber.getText().toString());
                 edNumber.setText(null);
+                flag = true;
             }
         });
         btMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 operation = "*";
-                lastvalue = Integer.parseInt(edNumber.getText().toString());
+                checkValue();
+                currentvalue = Integer.parseInt(edNumber.getText().toString());
                 edNumber.setText(null);
+                flag = true;
             }
         });
         btDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 operation = "/";
-                lastvalue = Integer.parseInt(edNumber.getText().toString());
+                checkValue();
+                currentvalue = Integer.parseInt(edNumber.getText().toString());
                 edNumber.setText(null);
+                flag = true;
             }
         });
         btEq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer result = process(lastvalue, currentvalue);
-                edResult.setText(edNumber.getText().toString()+ " " +operation+ " " + String.valueOf(lastvalue) + " = " + String.valueOf(result));
-                lastvalue = result;
+
+                resultOfAll = process(lastvalue, currentvalue);
+                edResult.setText(String.valueOf(lastvalue)+ " " +operation+ " " + edNumber.getText().toString() + " = " + String.valueOf(resultOfAll));
+                lastvalue = resultOfAll;
+                currentvalue = Integer.parseInt(edNumber.getText().toString());
+
 
             }
         });
@@ -182,11 +194,24 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     edNumber.setText(null);
                     edResult.setText(null);
+                    resultOfAll = 0;
+                    flag = false;
                 }
             }
         });
 
 
+    }
+    public void checkValue ()
+    {
+        if(flag == true)
+        {
+            lastvalue = resultOfAll;
+        }
+        else
+        {
+            lastvalue = currentvalue;
+        }
     }
 
 
