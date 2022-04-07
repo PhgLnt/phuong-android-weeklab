@@ -36,7 +36,7 @@ public class ViewContactInfoActivity extends Activity {
         @Override
         public void onClick(View view) {
             finish();
-            ;
+
         }
     };
 
