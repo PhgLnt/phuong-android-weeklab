@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("projectkey", txtProject.getText().toString());
                 iGetContactInfo.putExtras(bundle);
                 startActivity(iGetContactInfo);
+
+
             }
         });
     }
