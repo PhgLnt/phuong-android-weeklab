@@ -49,7 +49,7 @@ public class use_adapter extends BaseAdapter {
         person_adapter pe = this.getItem(i);
 
         tv_name.setText(pe.getName());
-        tv_from.setText(pe.getFrom());
+        tv_from.setText("from " + pe.getFrom());
 
         int img_resource_numbers [] = {R.drawable.icon_1,
                R.drawable.icon_2,
