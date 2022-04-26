@@ -11,6 +11,12 @@ import android.widget.TextView;
 
 public class use_adapter extends BaseAdapter {
     Activity mActivity;
+
+    public use_adapter(Activity mActivity, person_list_adapter per) {
+        this.mActivity = mActivity;
+        this.per = per;
+    }
+
     person_list_adapter per;
 
 
@@ -45,8 +51,16 @@ public class use_adapter extends BaseAdapter {
         tv_name.setText(pe.getName());
         tv_from.setText(pe.getFrom());
 
-        int img_resource_numbers [] = {R.drawable.}
-        img.setImageResource(R.drawable.);
+        int img_resource_numbers [] = {R.drawable.icon_1,
+               R.drawable.icon_2,
+               R.drawable.icon_3,
+               R.drawable.icon_4,
+               R.drawable.icon_5,
+               R.drawable.icon_6,
+               R.drawable.icon_7,
+               R.drawable.icon_8,
+               R.drawable.icon_9};
+        img.setImageResource(img_resource_numbers[i]);
 
         return onePerson;
     }
