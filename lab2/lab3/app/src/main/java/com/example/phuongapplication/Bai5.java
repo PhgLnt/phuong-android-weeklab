@@ -71,6 +71,8 @@ public class Bai5 extends AppCompatActivity {
 
 
     };
+    @Override
+    protected void onPause() { super.onPause(); finish(); }
 
 
 }
