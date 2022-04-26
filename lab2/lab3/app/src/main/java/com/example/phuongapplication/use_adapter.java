@@ -5,7 +5,8 @@ import android.widget.BaseAdapter;
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class use_adapter extends BaseAdapter {
@@ -20,7 +21,7 @@ public class use_adapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
+    public person_adapter getItem(int i) {
         return per.getPersonList().get(i);
     }
 
@@ -34,9 +35,19 @@ public class use_adapter extends BaseAdapter {
        View onePerson;
         LayoutInflater inflater =(LayoutInflater) mActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         onePerson = inflater.inflate(R.layout.adapter_item,viewGroup,false);
-        
 
+        TextView tv_name = onePerson.findViewById(R.id.textVname);
+        TextView tv_from = onePerson.findViewById(R.id.textVfrom);
+        ImageView img = onePerson.findViewById(R.id.imageViewAda);
 
-        return null;
+        person_adapter pe = this.getItem(i);
+
+        tv_name.setText(pe.getName());
+        tv_from.setText(pe.getFrom());
+
+        int img_resource_numbers [] = {R.drawable.}
+        img.setImageResource(R.drawable.);
+
+        return onePerson;
     }
 }
