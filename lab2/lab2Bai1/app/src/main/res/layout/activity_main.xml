@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="264dp"
+        android:layout_height="271dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="97dp"
+        android:src="@drawable/hihi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tV1"
+        android:layout_width="83dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="Green"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tV2"
+        android:layout_width="83dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:text="Yellow"
+        android:textSize="25dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tV4"
+        android:layout_width="83dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="Red"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tV3"
+        android:layout_width="83dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="Blue"
+        android:textSize="25dp" />
+
+    <RadioGroup
+        android:id="@+id/raGr"
+        android:layout_width="417dp"
+        android:layout_height="79dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:padding="15px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_b"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="30dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.200"
+            app:layout_constraintStart_toEndOf="@+id/radio_a" />
+
+        <RadioButton
+            android:id="@+id/radio_a"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="47dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radio_d" />
+
+        <RadioButton
+            android:id="@+id/radio_d"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="51dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radio_c"
+            app:layout_constraintTop_toBottomOf="@+id/tV4"
+            app:layout_constraintVertical_bias="0.500" />
+
+        <RadioButton
+            android:id="@+id/radio_c"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="48dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tV1" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>
