@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".AlarmActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TimePicker
+        android:id="@+id/time"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:amPmBackgroundColor="@color/black"
+        android:amPmTextColor="@color/black"
+        android:numbersSelectorColor="@color/purple_500"
+        android:timePickerMode="clock"
+        android:headerBackground="@color/orange"
+
+        />
+    <Button
+        android:id="@+id/set_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setAlarm"
+        android:padding="10dp"
+        android:text="SET ALARM" />
+
+    <Button
+        android:id="@+id/cancel_alarm"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:text="CANCEL ALARM"
+        android:onClick="cancelAlarm"/>
+</LinearLayout>
