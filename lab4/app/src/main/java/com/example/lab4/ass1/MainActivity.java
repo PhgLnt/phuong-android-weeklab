@@ -1,10 +1,13 @@
-package com.example.lab4;
+package com.example.lab4.ass1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.lab4.R;
+import com.example.lab4.ass1.SimpleAsyncTask;
 
 public class MainActivity extends AppCompatActivity {
 

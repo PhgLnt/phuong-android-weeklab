@@ -1,4 +1,4 @@
-package com.example.lab4;
+package com.example.lab4.ass1;
 
 import android.os.AsyncTask;
 import android.widget.TextView;
@@ -16,7 +16,7 @@ public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
 
         // Make the task take long enough that we have
         // time to rotate the phone while it is running
-        int s = n * 200;
+        int s = n * 300;
 
         // Sleep for the random amount of time
         try {
@@ -26,7 +26,7 @@ public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
         }
 
         // Return a String result
-        return "Awake at last after sleeping for " + s + " milliseconds!";
+        return "I love you " + s;
     }
 
     public SimpleAsyncTask(TextView tv) {
@@ -35,4 +35,5 @@ public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
     protected void onPostExecute(String result) {
         mTextView.setText(result);
     }
+
 }
